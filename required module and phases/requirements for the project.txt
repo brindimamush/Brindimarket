@@ -1,0 +1,29 @@
+python
+Module,Version,Purpose
+fastapi,^0.115.0,High-performance web framework.
+uvicorn[standard],^0.30.0,ASGI server to run the application.
+sqlmodel,^0.0.22,Combines SQLAlchemy and Pydantic for cleaner models.
+alembic,^1.13.0,Database migration tool.
+pydantic[email],^2.9.0,Data validation and settings management.
+psycopg2-binary,^2.9.0,PostgreSQL adapter (standard).
+asyncpg,^0.29.0,High-performance async PostgreSQL driver.
+python-jose[cryptography],^3.3.0,JWT token generation and verification.
+passlib[bcrypt],^1.7.4,Secure password hashing.
+python-multipart,^0.0.9,Required for handling file/image uploads.
+jinja2,^3.1.0,Templating for emails and invoices.
+boto3,^1.34.0,Handling S3 storage for tenant-specific logos/images.
+
+Typescript
+
+Module,Version,Purpose
+next,^14.2.0,React framework with App Router support.
+react,^18.3.0,UI library.
+typescript,^5.4.0,Static typing for JavaScript.
+tailwindcss,^3.4.0,Utility-first CSS for white-label styling.
+@tanstack/react-query,^5.40.0,Powerful data fetching and caching layer.
+axios,^1.7.0,Promise-based HTTP client.
+lucide-react,^0.370.0,"Lightweight, customizable icon set."
+zustand,^4.5.0,Light and fast state management for the cart.
+react-hook-form,^7.51.0,Performant form handling.
+zod,^3.23.0,TypeScript-first schema validation for forms.
+clsx & tailwind-merge,^2.3.0,Helpers for dynamic Tailwind class management.

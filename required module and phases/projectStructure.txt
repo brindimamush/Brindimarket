@@ -1,0 +1,16 @@
+├── backend/
+│   ├── app/
+│   │   ├── api/          # Endpoints (v1)
+│   │   ├── core/         # Config, Security, Auth
+│   │   ├── models/       # SQLModel (Database)
+│   │   ├── schemas/      # Pydantic (Request/Response)
+│   │   └── services/     # Business Logic
+│   ├── alembic/          # Database Migrations
+│   └── main.py           # Entry Point
+├── frontend/
+│   ├── components/       # Atomic UI Components
+│   ├── hooks/            # Custom React Hooks
+│   ├── lib/              # API Clients & Utils
+│   ├── styles/           # Tailwind & Global CSS
+│   └── pages/            # Next.js Routes
+└── docker-compose.yml

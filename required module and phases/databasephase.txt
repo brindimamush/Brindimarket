@@ -1,0 +1,55 @@
+1. Catalog & Products
+Table,Purpose,Key Columns
+categories,Product hierarchy,"id, name, slug, parent_id, metadata (JSONB)"
+products,Core product info,"id, name, brand, is_active, description"
+product_variants,Sellable SKUs,"id, product_id, sku, price, stock, weight"
+attributes,Spec definitions,"id, name, type (e.g., ""Color"", ""Size"")"
+attribute_values,Variant specs,"id, attribute_id, variant_id, value"
+
+2. Orders & Customers
+Table,Purpose,Key Columns
+users,Identity management,"id, email, password_hash, role"
+orders,Sales records,"id, user_id, status, total_amount, currency"
+order_items,Line item snapshots,"id, order_id, variant_id, price_at_purchase"
+
+3. White-Label Configuration
+Table,Purpose,Key Columns
+tenant_config,Branding & Settings,"store_name, logo_url, primary_color, domain"
+
+
+
+Development Phases
+Phase 1: Foundation & Modeling
+Set up FastAPI project structure with SQLModel.
+
+Initialize PostgreSQL with migrations (Alembic).
+
+Define the core tenant_config logic to drive frontend branding.
+
+Phase 2: The "Flexible" Catalog
+Implement CRUD for products and variants.
+
+Build the JSONB metadata handler for dynamic product attributes.
+
+Create the category tree logic (Self-referencing tables).
+
+Phase 3: Identity & Checkout
+JWT-based Auth (OAuth2 with FastAPI).
+
+Shopping cart logic (Redis-backed or Database-backed).
+
+Abstract Payment Gateway (Adapter pattern for Stripe/PayPal).
+
+Phase 4: Frontend "Chameleon" Storefront
+Build a headless component library in React/TypeScript.
+
+Implement a dynamic theme provider using Tailwind CSS variables.
+
+Generate TypeScript types from the FastAPI OpenAPI spec.
+
+Phase 5: Admin Dashboard
+Create a specialized interface for the "Software Owner" to manage their specific instance.
+
+Branding upload (Logo, Favicon, Colors).
+
+Order management and analytics.
